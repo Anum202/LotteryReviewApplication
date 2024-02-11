@@ -172,8 +172,10 @@ const styles = StyleSheet.create({
         marginTop: windowHeight * 0.02,
     },
     paymentText: {
+        flex: 1,
         marginTop: 10,
-        marginRight: windowWidth * 0.3,
+        // marginRight: windowWidth * 0.3,
+        marginLeft: windowWidth * 0.02,
         fontSize: 16,
         color: 'white',
     },

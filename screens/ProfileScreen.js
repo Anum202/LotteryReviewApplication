@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet, Dimensions } from 'react-native';
 
 import Colors from '../constants/Colors';
 import ProfileDataComponent from '../components/ProfileDataComponent';
 
 const ProfileScreen = () => {
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={styles.headerContainer}>
                 <Text style={styles.headingTextStyles}>Profile</Text>
                 <TouchableOpacity>
@@ -61,7 +61,7 @@ const ProfileScreen = () => {
                 rightIcon={require('../assets/images/expand-icon.png')}
                 styless={{ color: Colors.redShade }}
             />
-        </View>
+        </ScrollView>
     )
 }
 export default ProfileScreen;
@@ -71,7 +71,7 @@ const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flexGrow: 1,
         backgroundColor: Colors.bg1,
     },
     headingTextStyles: {

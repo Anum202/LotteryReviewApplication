@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, Image, ScrollView, StyleSheet, Dimensions } from 'react-native';
 
 import Colors from '../constants/Colors';
 
 const DrawResultsScreen = ({ navigation }) => {
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={styles.bodyContainer}>
                 <Text style={styles.headingTextStyles}>Winner!</Text>
                 <View style={styles.contentContainer}>
@@ -25,10 +25,10 @@ const DrawResultsScreen = ({ navigation }) => {
                 </View>
                 <Image
                     source={require('../assets/images/airpods.png')}
-                    style={{ alignSelf: 'center', marginTop: windowHeight * 0.04 }}
+                    style={{ alignSelf: 'center', marginTop: windowHeight * 0.01 }}
                 />
             </View>
-        </View>
+        </ScrollView>
     )
 }
 export default DrawResultsScreen;
@@ -38,12 +38,12 @@ const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flexGrow: 1,
         backgroundColor: Colors.bg1,
     },
     bodyContainer: {
         backgroundColor: Colors.bg3,
-        height: windowHeight * 0.8,
+        height: windowHeight * 0.75,
         width: windowWidth * 0.9,
         borderColor: Colors.bg3,
         borderRadius: 20,

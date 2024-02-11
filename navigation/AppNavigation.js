@@ -57,6 +57,8 @@ function TabNavigator() {
                                 borderRadius: 30,
                                 padding: 10,
                                 backgroundColor: focused ? Colors.bg4 : 'transparent',
+                                alignItems: 'center',
+                                justifyContent: 'center',
                             }}>
                                 <Image
                                     source={tab.source}
